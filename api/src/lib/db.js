@@ -5,7 +5,7 @@ export const request = async (query = {}) => {
 
   const graphQLClient = new GraphQLClient(endpoint, {
     headers: {
-      authorization: 'Basic Zm5BRC1HMW1HSUFDQml5VVFhTFVrb2dzaDBBVC1jR1B4Ul9ocXlXMjpibG9naXJmYW46c2VydmVy'
+      authorization: 'Bearer ' + process.env.FAUNADB_SECRET
     },
   })
 
@@ -16,5 +16,3 @@ export const request = async (query = {}) => {
     return error
   }
 }
-
-// fnAD-HZiKIACCL2r4QKqwLG9o1TEEyyEJKfOJm0j
